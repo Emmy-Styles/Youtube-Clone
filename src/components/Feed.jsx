@@ -3,17 +3,16 @@ import { useState, useEffect } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 
 import { fetchFromAPI } from "../utils/FetchFromAPI";
-import { Sidebar, Videos } from "./";
+import { Videos, Sidebar } from "./";
 
 const Feed = () => {
-  const [ selectedCategory, 
-    setSelectedCategory] = useState ('New')
-    const [ videos, setVideos] = useState([])
+  const [selectedCategory, setSelectedCategory] = useState("New");
+  const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    fetchFromAPI(`search?part=snippet&q=$
-    {selectedCategory}`)
-    .then ((data) => setVideos(data.items))
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
+      setVideos(data.items)
+    );
   }, [selectedCategory]);
 
   return (
@@ -34,10 +33,10 @@ const Feed = () => {
           variant="body2"
           sx={{ mt: 1.5, color: "#fff" }}
         >
-          Copyright 2022 Code Scribe
+          Copyright © 2022 Code Scribe
         </Typography>
       </Box>
-      <Box p={2} sx={{ overflow: "auto", height: "90vh", flex: 2 }}>
+      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
         <Typography
           variant="h4"
           fontWeight="bold"
@@ -45,7 +44,7 @@ const Feed = () => {
           sx={{ color: "white" }}
         >
           {selectedCategory} <span style={{ color: "#F31503" }}>videos</span>
-        </Typography> 
+        </Typography>
         <Videos videos={videos} />
       </Box>
     </Stack>
