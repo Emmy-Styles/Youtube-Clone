@@ -75,8 +75,6 @@ const VideoDetail = () => {
           <Videos videos={videos} direction="column" />
         </Box>
       </Stack>
-        
-
     </Box>
   );
 };
