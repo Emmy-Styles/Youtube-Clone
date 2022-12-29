@@ -11,13 +11,14 @@ import GraphicEqIcon from '@mui/icons-material/GraphicEq';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
+import CameraIcon from '@mui/icons-material/Camera'
 import channelDemoPic from '../Assets/channelDemoPic.jpg'
 
 export const logo = 'https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png';
 
 export const categories = [
   { name: 'New', icon: <HomeIcon />, },
-  { name: 'Chibuzor Ehiemere', icon: <CodeIcon />, },
+  { name: 'Chibuzor Ehiemere', icon: <CameraIcon />, },
   { name: 'Coding', icon: <CodeIcon />, },
   { name: 'ReactJS', icon: <CodeIcon />, },
   { name: 'NextJS', icon: <CodeIcon />, },
